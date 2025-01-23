@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "20.10.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "quidditch-cal",
+    "libraryId": "738a3f2b-e241-4663-a49f-4b147064996c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "quidditchCal",
+    "solutionShortDescription": "quidditchCal description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

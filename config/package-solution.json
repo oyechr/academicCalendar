@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "quidditch-cal-client-side-solution",
+    "id": "738a3f2b-e241-4663-a49f-4b147064996c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "quidditchCal description"
+      },
+      "longDescription": {
+        "default": "quidditchCal description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "quidditch-cal Feature",
+        "description": "The feature that activates elements of the quidditch-cal solution.",
+        "id": "4e982332-06a0-4519-af0a-0564b73854cf",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/quidditch-cal.sppkg"
+  }
+}
