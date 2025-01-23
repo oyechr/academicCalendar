@@ -19,9 +19,17 @@ steps:
   inputs:
     command: 'install'
     workingDir: 'SPFX.quidditchCal'
+
+- task: gulp@0
+  displayName: 'gulp bundle'
+  inputs:
+    gulpFile: SPFX.quidditchCal/gulpfile.js
+    targets: bundle
+    arguments: '--ship' 
+
 - task: gulp@0
   inputs:
-    gulpFile: 'gulpfile.js'
+    gulpFile: 'SPFX.quidditchCal/gulpfile.js'
     targets: 'package-solution'
     arguments: '--ship'
     gulpjs: 'node_modules/gulp/bin/gulp.js'
