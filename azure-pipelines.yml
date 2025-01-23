@@ -1,3 +1,7 @@
+pool:
+
+  name: Azure Pipelines
+
 steps:
 
 - task: NodeTool@0
@@ -6,7 +10,77 @@ steps:
 
   inputs:
 
-    versionSpec: 18.20.1
+    versionSpec: 18.20.0
 
     checkLatest: true
+
+
+
+- task: Npm@1
+
+  displayName: 'npm install'
+
+  inputs:
+
+    workingDir: SPFX.quidditchCal
+
+    verbose: false
+
+
+
+- task: gulp@0
+
+  displayName: 'gulp bundle'
+
+  inputs:
+
+    gulpFile: SPFX.quidditchCal/gulpfile.js
+
+    targets: bundle
+
+    arguments: '--ship'
+
+
+
+- task: gulp@0
+
+  displayName: 'gulp  package-solution'
+
+  inputs:
+
+    gulpFile: SPFX.quidditchCal/gulpfile.js
+
+    targets: 'package-solution'
+
+    arguments: '--ship'
+
+
+
+- task: CopyFiles@2
+
+  displayName: 'Copy Files to: drop'
+
+  inputs:
+
+    Contents: '**/solution/*.sppkg'
+
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/drop'
+
+    OverWrite: true
+
+    flattenFolders: true
+
+
+
+- task: PublishBuildArtifacts@1
+
+  displayName: 'Publish Artifact: ClientsideSolutions'
+
+  inputs:
+
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
+
+    ArtifactName: ClientsideSolutions
+
+
 
