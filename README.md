@@ -4,7 +4,7 @@
 
 The Quidditch Calendar is a SharePoint Framework (SPFx) web part that displays the Hogwarts Academic Calendar using a calendar view.
 This web part is built using React and integrates with the `react-big-calendar` library to provide a rich calendar experience.
-Construct and insert custom events 
+Construct, insert custom events or connect to your own data. 
 ## Features
 
 - fast serve :  custom webpack build, which produces the same output files as SharePoint Framework build pipeline, but does it a lot faster, because of a number of improvements
