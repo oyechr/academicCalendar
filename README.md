@@ -1,4 +1,4 @@
-# Quidditch Calendar SPFx Web Part
+# Hogwarts Academic Calendar SPFx Web Part
 
 ## Overview
 
